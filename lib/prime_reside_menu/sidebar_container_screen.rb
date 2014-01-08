@@ -5,6 +5,9 @@ module PrimeResideMenu
     def self.new(menu, content, options = {})
       screen = self.alloc.initWithContentViewController(nil, menuViewController: nil)
       screen.parallaxEnabled = false
+      if Prime::Config.sidebar_container.background_image?
+        screen.backgroundImage = Prime::Config.sidebar_container.background_image
+      end
 
       full_width = UIScreen.mainScreen.bounds.size.width
 

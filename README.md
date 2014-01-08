@@ -1,4 +1,4 @@
-# Prime::Reside::Menu
+# PrimeResideMenu
 
 RESideMenu integration for MotionPrime.
 
@@ -11,10 +11,7 @@ Add this line to your application's Gemfile:
 And then execute:
 
     $ bundle
-
-Or install it yourself as:
-
-    $ gem install prime-reside-menu
+    $ rake pod:install
 
 
 ## Contributing
