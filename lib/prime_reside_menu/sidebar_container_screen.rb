@@ -5,7 +5,7 @@ module PrimeResideMenu
     def self.new(menu, content, options = {})
       screen = self.alloc.initWithContentViewController(nil, menuViewController: nil)
       screen.parallaxEnabled = false
-      if Prime::Config.sidebar_container.background_image?
+      if !Prime::Config.sidebar_container.background_image.nil?
         screen.backgroundImage = Prime::Config.sidebar_container.background_image
       end
 
@@ -34,6 +34,10 @@ module PrimeResideMenu
 
     def hide_sidebar
       self.hideMenuViewController
+    end
+
+    def toggle_sidebar
+      self.presentMenuViewController
     end
 
     def menu_controller=(c)
