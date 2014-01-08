@@ -38,6 +38,10 @@ module PrimeResideMenu
       @sidebar_container.hide_sidebar
     end
 
+    def toggle_sidebar
+      @sidebar_container.toggle_sidebar
+    end
+
     private
       def open_with_sidebar(content, sidebar, options = {})
         @sidebar_container = SidebarContainerScreen.new(sidebar, content, options)

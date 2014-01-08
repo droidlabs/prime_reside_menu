@@ -7,6 +7,10 @@ module PrimeResideMenu
     def hide_sidebar
       app_delegate.hide_sidebar
     end
+
+    def toggle_sidebar
+      app_delegate.toggle_sidebar
+    end
   end
 end
 
