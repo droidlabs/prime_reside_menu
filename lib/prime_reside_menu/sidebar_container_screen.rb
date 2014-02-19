@@ -5,6 +5,8 @@ module PrimeResideMenu
     def self.new(menu, content, options = {})
       screen = self.alloc.initWithContentViewController(nil, menuViewController: nil)
       screen.parallaxEnabled = false
+      screen.panFromEdge = options[:pan_from_edge] if options.has_key?(:pan_from_edge)
+
       if !Prime::Config.sidebar_container.background_image.nil?
         screen.backgroundImage = Prime::Config.sidebar_container.background_image
       end
