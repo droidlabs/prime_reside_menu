@@ -9,7 +9,6 @@ Motion::Require.all(Dir.glob(File.expand_path('../prime_reside_menu/**/*.rb', __
 
 Motion::Project::App.setup do |app|
   app.pods do
-    # pod 'RESideMenu', git: 'git@github.com:droidlabs/RESideMenu.git'
-    pod 'RESideMenu', path: '../RESideMenu'
+    pod 'RESideMenu', git: 'git@github.com:droidlabs/RESideMenu.git'
   end
 end
