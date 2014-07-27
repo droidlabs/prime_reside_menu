@@ -27,6 +27,10 @@ module PrimeResideMenu
       screen.menu_controller = menu unless menu.nil?
       screen.content_controller = content unless content.nil?
 
+      if !Prime::Config.sidebar_container.background_color.nil?
+        screen.view.backgroundColor = Prime::Config.sidebar_container.background_color
+      end
+
       screen
     end
 
